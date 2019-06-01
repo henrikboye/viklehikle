@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Lato:400i");
+
 :root {
   /* color */
   /* Main Primary color*/
@@ -18,12 +20,9 @@
   --color-white: #fff;
   --color-black: #000;
 
-  --primary-color: #e50914;
-  --dark-color: #141414;
-  --body-color: #999;
-
   /* fonts */
-  --font-primary: Helvetica, sans-serif;
+  --font-primary: "Comfortaa", cursive;
+  --font-display: "lato";
 }
 
 *,
@@ -88,8 +87,6 @@ img {
   width: 100%;
   height: 100%;
   z-index: 1;
-
-  /* background: rgba(0, 0, 0, 0.6); */
   box-shadow: inset 100px 90px 250px var(--color-black),
     inset -100px -90px 250px var(--color-black);
 }
@@ -232,6 +229,9 @@ img {
 .footer img {
   max-width: 80px;
 }
+.footer__media li {
+  padding: 0.5rem;
+}
 
 /* container */
 .container {
@@ -308,7 +308,9 @@ img {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  background: var(--color-primary-0);
+  background: var(--color-primary-4);
+  font-family: var(--font-display);
+  font-weight: 400;
 }
 
 .story__pictures {
@@ -415,7 +417,17 @@ img {
   color: var(--color-secondary-1);
 }
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 812px) and (orientation: landscape) {
+  .showcase-content {
+    margin-top: 0.1rem;
+  }
+  .story__img--2 {
+    width: 60%;
+    grid-column: 3/7;
+  }
+}
+
+@media only screen and (max-width: 43.75em) {
   .showcase::after {
     box-shadow: inset 80px 80px 250px var(--color-black),
       inset -80px -80px 250px var(--color-black);
@@ -431,7 +443,7 @@ img {
     flex-direction: column-reverse;
   }
 }
-@media (max-width: 960px) {
+@media only screen and (max-width: 60em) {
   .showcase {
     height: 70vh;
   }
